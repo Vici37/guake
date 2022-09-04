@@ -87,6 +87,10 @@ TERMINAL_MATCH_EXPRS = [
 # tuple (title/quick matcher/filename and line number extractor)
 QUICK_OPEN_MATCHERS = [
     (
+        "Any part of the line that looks like a file, with optional line_number:col_number",
+        r"[a-zA-Z0-9\/\_\-]+\.([a-zA-Z][a-zA-Z0-9]*|[0-9]+[a-zA-Z][a-zA-Z0-9]*)(\:[0-9]+(\:[0-9]+)?)?",
+        r"([a-zA-Z0-9\/\_\-]+\.[a-zA-Z0-9]+)\:?([0-9]+\:[0-9]+|[0-9]+)?",
+    ),
         "Python traceback",
         r"^\s*File\s\".*\",\sline\s[0-9]+",
         r"^\s*File\s\"(.*)\",\sline\s([0-9]+)",
